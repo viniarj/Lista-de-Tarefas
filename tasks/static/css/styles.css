@@ -1,6 +1,11 @@
 .container-fluid {
     padding: 0;
 }
+
+.container-fluid .row {
+    margin: 0%;
+}
+
 /* Navbar */
 
 .navbar {
@@ -117,21 +122,13 @@ ul.messages li{
     list-style: none;
 }
 
-/* Paginação */
+/* Login */
 
-.pagination {
-    margin-bottom: 20px;
+.auth-card {
+    margin-bottom: 30px;
 }
 
-.step-links {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
 }
-
-.step-links .current {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>*/
