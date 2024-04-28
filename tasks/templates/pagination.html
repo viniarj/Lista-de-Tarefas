@@ -1,0 +1,23 @@
+{% if tasks.has_other_pages %}
+<div class="btn-group" role="group" aria-label="Item pagination">
+    {% if tasks.has_previous %}
+        <a href="?page={{ tasks.previous_page }}" class="btn btn-outline-primary">&laquo;</a>
+    {% endif %}
+
+    {% for page in tasks.paginator.page_range %}
+        {% if tasks.number == page %}
+            <button class="btn btn-outline-primary active">
+                <span>{{ page }} <span class="sr-only">(Atual)</span></span>
+            </button>
+        {% else %}
+            <a href="?page={{ page }}" class="btn btn-outline-primary">
+                {{ page }}
+            </a>
+        {% endif %}
+    {% endfor %}
+
+    {% if tasks.has_next %}
+        <a href="?page={{ tasks.next_page_number }}" class="btn btn-outline-primary">&raquo;</a>
+    {% endif %}
+</div>
+{% endif %}
